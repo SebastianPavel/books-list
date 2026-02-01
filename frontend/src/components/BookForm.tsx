@@ -24,12 +24,10 @@ export function BookForm({ onSubmit }: Props) {
             setError("Title is required.");
             return;
         }
-
         if (trimmedImageUrl && !isValidUrl(trimmedImageUrl)) {
             setError("Image URL must be a valid URL.");
             return;
         }
-
         try {
             setSubmitting(true);
 
@@ -60,7 +58,6 @@ export function BookForm({ onSubmit }: Props) {
                     aria-invalid={!!error}
                 />
             </label>
-
             <label>
                 Image URL (optional)
                 <input
@@ -70,7 +67,6 @@ export function BookForm({ onSubmit }: Props) {
                     aria-invalid={!!error}
                 />
             </label>
-
             <label>
                 Description (optional)
                 <input
@@ -79,11 +75,9 @@ export function BookForm({ onSubmit }: Props) {
                     onChange={(e) => setDescription(e.target.value)}
                 />
             </label>
-
             <button type="button" onClick={handleSubmit} disabled={submitting}>
                 {submitting ? "Adding…" : "Add new book"}
             </button>
-
             {error && (
                 <p className="error" role="alert">
                     {error}

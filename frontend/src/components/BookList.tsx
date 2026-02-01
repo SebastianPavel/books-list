@@ -37,7 +37,6 @@ export function BookList() {
             <h2>Add new book</h2>
             <BookForm onSubmit={handleCreateBook} />
             {error && <p className="error">{error}</p>}
-            <hr />
             {books.length === 0 ? (
                 <p>No books available.</p>
             ) : (
