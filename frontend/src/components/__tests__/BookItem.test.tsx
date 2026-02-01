@@ -1,6 +1,6 @@
 import { render, screen, fireEvent } from "@testing-library/react";
-import { BookItem } from "./BookItem";
-import type { Book } from "../api/books-api";
+import { BookItem } from "../BookItem";
+import type { Book } from "../../api/books-api";
 
 const mockBook: Book = {
     id: "1",
